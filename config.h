@@ -17,9 +17,10 @@
 #define TRAILING_DELIMITER 0
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
-#define BLOCKS(X)                                                       \
-    X("   ", "date '+%Y-%m-%d   %H:%M'",                      10,  0) \
-    X("",    "~/.local/src/dwmblocks-async/blocks/volume.sh",    0, 10) \
-    X("",    "~/.local/src/dwmblocks-async/blocks/battery",     10,  0) \
+#define BLOCKS(X)                                                                  \
+    X("   ", "date '+%Y-%m-%d   %H:%M'",                                 10,  0) \
+    X("",    "~/.local/src/dwmblocks-async/blocks/volume.sh",               0, 10) \
+    X("",    "~/.local/src/dwmblocks-async/blocks/battery",                10,  0) \
+    X("",    "~/.local/src/dwmblocks-async/blocks/batteryNotifier.sh",     20,  0) \
 
 #endif  // CONFIG_H
