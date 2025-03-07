@@ -8,7 +8,7 @@
 #define MAX_BLOCK_OUTPUT_LENGTH 45
 
 // Control whether blocks are clickable.
-#define CLICKABLE_BLOCKS 0
+#define CLICKABLE_BLOCKS 1
 
 // Control whether a leading delimiter should be prepended to the status.
 #define LEADING_DELIMITER 0
@@ -18,8 +18,8 @@
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X)                                                                  \
-    X("   ", "date '+%Y-%m-%d   %H:%M'",                                 10,  0) \
-    X("",    "~/.local/src/dwmblocks-async/blocks/volume.sh",               0, 10) \
+    X("   ","~/.local/src/dwmblocks-async/blocks/current_time.sh",        10,  1) \
+    X("  ", "~/.local/src/dwmblocks-async/blocks/volume.sh",               0, 10) \
     X("",    "~/.local/src/dwmblocks-async/blocks/battery",                10,  0) \
     X("",    "~/.local/src/dwmblocks-async/blocks/batteryNotifier.sh",     20,  0) \
 
