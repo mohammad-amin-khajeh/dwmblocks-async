@@ -5,5 +5,5 @@ case $BLOCK_BUTTON in
 3) st -e "$EDITOR" "$0" ;;
 esac
 
-now="$(date '+%Y-%m-%d   %H:%M')"
+now="$(date '+%Y-%m-%d    %I:%M %p')"
 printf "%s" "$now"
