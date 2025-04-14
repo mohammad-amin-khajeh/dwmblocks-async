@@ -8,4 +8,10 @@ case $BLOCK_BUTTON in
 esac
 
 vol="$(pamixer --get-volume)"
+is_muted="$(pactl get-sink-mute @DEFAULT_SINK@ | grep -oE '[^ ]+$')"
+if [ "$is_muted" == 'yes' ]; then
+  printf "%s  " 
+else
+  printf "%s  " 
+fi
 printf "%s%%" "$vol"
