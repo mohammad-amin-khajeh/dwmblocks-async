@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env dash
 
 case $BLOCK_BUTTON in
 1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
@@ -9,7 +9,7 @@ esac
 
 vol="$(pamixer --get-volume)"
 is_muted="$(pactl get-sink-mute @DEFAULT_SINK@ | grep -oE '[^ ]+$')"
-if [ "$is_muted" == 'yes' ]; then
+if [ "$is_muted" = 'yes' ]; then
   printf "%s  " 
 else
   printf "%s  " 
