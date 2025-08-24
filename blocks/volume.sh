@@ -1,4 +1,4 @@
-#!/usr/bin/env dash
+#!/usr/bin/env sh
 
 case $BLOCK_BUTTON in
 1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
